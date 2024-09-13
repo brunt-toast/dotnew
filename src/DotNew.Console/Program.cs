@@ -16,5 +16,6 @@ internal class Program
         }
 
         if (args[0] == "run") Run.RunProject(args[1..]);
+        if (args[0] == "install") Install.VerifyDotnetInstalled(args[1..]);
     }
 }

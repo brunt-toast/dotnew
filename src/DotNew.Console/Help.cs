@@ -43,4 +43,6 @@ internal class Help
                                
                                run [options] - Fall-through to dotnet run
                                """;
+
+    private const string Install = "install - Verify that .NET is installed by running the dotnet-install scripts for this OS. See https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-install-script. This command has no fall-through in dotnet.";
 }
