@@ -15,7 +15,7 @@ internal class Program
             Help.ShowHelp(args[1..]);
         }
 
-        if (args[1] == "--help" || args[1] == "-h" || args[1] == "-?" || args[1] == "help")
+        if (args.Length >= 2 && (args[1] == "--help" || args[1] == "-h" || args[1] == "-?" || args[1] == "help"))
         {
             Help.ShowHelp([args[0]]);
         }
