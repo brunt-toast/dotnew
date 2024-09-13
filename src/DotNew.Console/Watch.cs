@@ -1,24 +1,29 @@
-﻿namespace DotNew.Console;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-internal static class Run
+namespace DotNew.Console;
+internal class Watch
 {
-    public static void RunProject(string[] args)
+    public static void WatchProject(string[] args)
     {
         if (args.Length == 0)
         {
-            RunAny();
+            WatchAny();
         }
         else
         {
-            DotNetCommand.Invoke("run", args);
+            DotNetCommand.Invoke("watch", args);
         }
     }
 
-    private static void RunAny()
+    private static void WatchAny()
     {
         string cwd = Directory.GetCurrentDirectory();
         string[] projects = Directory.GetFiles(cwd, "*.csproj", SearchOption.AllDirectories);
-        
+
         switch (projects.Length)
         {
             case 0:

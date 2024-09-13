@@ -44,5 +44,11 @@ internal class Help
                                run [options] - Fall-through to dotnet run
                                """;
 
+    private const string Watch = """
+                                 watch - Search recursively for a single project, and watch if one (and only one) is found. Does not support any extra flags, including passing args to the invoked binary via '-- [args]'. 
+
+                                 watch [options] - Fall-through to dotnet watch
+                                 """;
+
     private const string Install = "install - Verify that .NET is installed by running the dotnet-install scripts for this OS. See https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-install-script. This command has no fall-through in dotnet.";
 }
